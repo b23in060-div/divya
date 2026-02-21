@@ -1,35 +1,70 @@
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background:#0f172a;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
     color:white;
+    scroll-behavior:smooth;
 }
 
-header{
-    background:#1e293b;
-    padding:40px;
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
 }
 
+.highlight{
+    color:#38bdf8;
+}
+
+.btn{
+    margin-top:20px;
+    padding:10px 25px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.1);
+}
+
+/* NAV */
 nav{
-    background:#020617;
+    background:rgba(0,0,0,0.4);
     text-align:center;
-    padding:10px;
+    padding:15px;
+    top:0;
+    backdrop-filter:blur(10px);
 }
 
 nav a{
     color:white;
-    margin:0 15px;
+
+    margin:0 20px;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
+
 }
+
 
 nav a:hover{
     color:#38bdf8;
 }
 
+
+/* SECTION */
 section{
-    padding:40px;
+    padding:60px;
+
     max-width:900px;
     margin:auto;
 }
@@ -38,24 +73,52 @@ h2{
     color:#38bdf8;
 }
 
-ul{
-    list-style:square;
 
+/* SKILLS */
+.skill{
+    margin:20px 0;
+}
+
+.progress{
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress div{
+    height:10px;
+    background:#38bdf8;
+}
+
+/* CARDS */
 .card{
-    background:#1e293b;
-    margin:15px 0;
-    border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    padding:25px;
+    margin:20px 0;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
 }
 
 .card:hover{
-    transform:scale(1.03);
+    transform:translateY(-10px);
 }
 
+/* FOOTER */
 footer{
-    background:#020617;
     text-align:center;
-}    padding:15px;
-    background:#334155;
-    transition:0.3s;
     padding:20px;
+    background:#020617;
+}
 
+/* Scroll Reveal */
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
